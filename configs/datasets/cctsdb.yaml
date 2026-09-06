@@ -1,0 +1,11 @@
+# CCTSDB 2021 dataset configuration.
+# The repository does not include the dataset itself.
+dataset:
+  name: cctsdb
+  path: data/CCTSDB2021
+  train: images/train
+  val: images/test
+  test: images/test
+  image_size: 640
+  nc: 3
+  names: [mandatory, prohibitory, warning]

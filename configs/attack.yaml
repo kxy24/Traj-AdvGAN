@@ -1,0 +1,27 @@
+# Traj-AdvGAN method settings used by this repository.
+attack:
+  eps: 0.03137254901960784       # 8/255
+  steps: 10
+  step_size: 0.00784313725490196 # 2/255
+  lambda_adv: 1.0
+  lambda_det: 10.0
+  lambda_traj: 10.0
+  lambda_smooth: 0.05
+  use_attention: true
+  use_trajectory: true
+  attention_reduction: 4
+
+training:
+  epochs: 50
+  batch_size: 4
+  workers: 4
+  lr_g: 0.0002
+  lr_d: 0.000005
+  amp: true
+  save_every: 10
+
+evaluation:
+  conf_threshold: 0.25
+  detector_iou_threshold: 0.45
+  vanish_iou_threshold: 0.5
+  quick_eval_batches: 8
